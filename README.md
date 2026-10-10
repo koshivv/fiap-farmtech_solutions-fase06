@@ -1,12 +1,14 @@
 # 🐱🚗 FarmTech Solutions — Visão Computacional com YOLOv5
 
-**FIAP · Fase 6 · PBL — Entrega 1**
-**Alunos:** 
-1. Victor Vergara Koshikene      — RM 568813
-2. Leonardo Lima de Queiroz      — RM 573539
-3. Vinicius Prado Speria         — RM 572741
-4. Leonardo Ribeiro de Souza     — RM 571534
-5. Matheus Costa Manzoli Machado — RM 571814
+**FIAP · Fase 6 · PBL — Entregas 1 e 2**
+
+| Integrante | RM |
+|---|---|
+| Victor Vergara Koshikene | 568813 |
+| Leonardo Lima de Queiroz | 573539 |
+| Vinicius Prado Speria | 572741 |
+| Leonardo Ribeiro de Souza | 571534 |
+| Matheus Costa Manzoli Machado | 571814 |
 
 [![Abrir no Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/koshivv/fiap-farmtech_solutions-fase06/blob/main/VictorVergaraKoshikene_rm568813_pbl_fase6.ipynb)
 
@@ -16,20 +18,23 @@
 
 ## Sobre o projeto
 
-A FarmTech Solutions expandiu seus serviços de IA para além do agronegócio, incluindo saúde animal, segurança patrimonial e controle de acesso. Este projeto simula a visita a um cliente que quer entender, na prática, como funciona um sistema de **visão computacional**.
-
-Treinamos um modelo **YOLOv5** customizado para detectar duas classes bem diferentes entre si:
+A FarmTech Solutions expandiu seus serviços de IA para além do agronegócio, incluindo saúde animal, segurança patrimonial e controle de acesso. Este projeto simula a visita a um cliente que quer entender, na prática, como funciona um sistema de **visão computacional**, usando duas classes bem diferentes entre si:
 
 | Classe | Exemplo de aplicação |
 |---|---|
 | `gato` | monitoramento de animais em propriedades |
 | `carro` | segurança patrimonial e controle de acesso de veículos |
 
-Também comparamos três cenários de treino (**30, 60 e 100 épocas**) para avaliar o impacto do número de épocas em acurácia, erro e desempenho.
+O trabalho está dividido em duas partes, no mesmo notebook:
 
-> 📓 **Toda a solução está documentada no notebook** [`VictorVergaraKoshikene_rm568813_pbl_fase6.ipynb`](VictorVergaraKoshikene_rm568813_pbl_fase6.ipynb): construção do dataset, rotulação, controle de qualidade, treino, validação, teste e conclusões. Este README é apenas um guia de entrada.
+- **Entrega 1:** treino de um **YOLOv5 customizado** com o nosso dataset, comparando três cenários de treino (**30, 60 e 100 épocas**) em acurácia, erro e desempenho.
+- **Entrega 2:** comparação da YOLO customizada com duas abordagens concorrentes, a **YOLO tradicional** (pré-treinada no COCO, sem customização) e uma **CNN treinada do zero**, em facilidade de uso, precisão, tempo de treinamento e tempo de inferência.
+
+> 📓 **Toda a solução está documentada no notebook** [`VictorVergaraKoshikene_rm568813_pbl_fase6.ipynb`](VictorVergaraKoshikene_rm568813_pbl_fase6.ipynb), com código comentado, saídas e análises. Este README é apenas um guia de entrada.
 
 ## Como o notebook está organizado
+
+**Parte 1 — Entrega 1: YOLO customizada**
 
 1. Configuração do ambiente (GPU e Google Drive)
 2. Construção do dataset a partir do COCO 2017
@@ -41,6 +46,14 @@ Também comparamos três cenários de treino (**30, 60 e 100 épocas**) para ava
 8. Teste em imagens nunca vistas
 9. Conclusões, pontos fortes e limitações
 
+**Parte 2 — Entrega 2: comparação com abordagens concorrentes**
+
+11. Preparação do ambiente da Parte 2
+12. YOLO tradicional (pré-treinada no COCO)
+13. CNN treinada do zero
+14. Comparação das três abordagens
+15. Avaliação crítica das abordagens
+
 ## Dataset em resumo
 
 - **Origem:** imagens do [COCO 2017](https://cocodataset.org) (conjunto `val2017`, que não foi usado no pré-treino do YOLOv5, evitando vazamento de dados).
@@ -49,22 +62,28 @@ Também comparamos três cenários de treino (**30, 60 e 100 épocas**) para ava
 
 ## Destaques dos resultados
 
-O cenário recomendado foi o de **60 épocas**, com o melhor mAP50 na validação e o melhor equilíbrio entre precisão, recall e tempo de treino. A análise completa, incluindo as limitações do experimento, está na Seção 9 do notebook.
+**Entrega 1:** entre os cenários de épocas, o de **60 épocas** foi o recomendado, com o melhor mAP50 na validação e o melhor equilíbrio entre precisão, recall e tempo de treino.
 
 ![Detecções no conjunto de teste](assets/teste_melhor_cenario.png)
 
+**Entrega 2:** para gatos e carros, a **YOLO tradicional** igualou ou superou a customizada em quase todas as métricas, sem rotulação nem treino, pois essas classes já existem no COCO. A customização continua sendo o caminho para objetos fora do COCO. A CNN do zero foi a mais rápida na inferência, mas a menos estável e não localiza objetos.
+
+![Comparação entre as três abordagens](assets/p2_comparacao_final.png)
+
 <details>
-<summary>Comparação entre os cenários de épocas</summary>
+<summary>Mais gráficos da Entrega 1</summary>
 
 ![Métricas por cenário](assets/metricas_comparativas.png)
 ![Curvas de treino](assets/curvas_comparativas.png)
 
 </details>
 
+As análises completas, incluindo limitações, estão nas Seções 9 e 15 do notebook.
+
 ## Estrutura do repositório
 
 ```
-├── VictorVergaraKoshikene_rm568813_pbl_fase6.ipynb   # notebook com a solução completa
+├── VictorVergaraKoshikene_rm568813_pbl_fase6.ipynb   # notebook com a solução completa (Entregas 1 e 2)
 ├── README.md
 ├── assets/                                           # imagens usadas neste README
 └── dataset/
@@ -89,5 +108,5 @@ O notebook cria a pasta `MyDrive/FarmTech_Fase6` no Drive de quem executa, com i
 ## Créditos e fontes
 
 - **Dataset:** Lin, T.-Y. et al. *Microsoft COCO: Common Objects in Context*. ECCV, 2014. Anotações sob licença CC BY 4.0; imagens do Flickr com licenças individuais, registradas no `manifesto_dataset.csv`.
-- **Modelo:** [Ultralytics YOLOv5](https://github.com/ultralytics/yolov5).
+- **Modelos:** [Ultralytics YOLOv5](https://github.com/ultralytics/yolov5) e [PyTorch](https://pytorch.org).
 - **Rotulação:** [Make Sense AI](https://www.makesense.ai).
