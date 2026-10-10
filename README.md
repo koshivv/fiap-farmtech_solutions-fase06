@@ -1,7 +1,12 @@
 # 🐱🚗 FarmTech Solutions — Visão Computacional com YOLOv5
 
 **FIAP · Fase 6 · PBL — Entrega 1**
-**Aluno:** Victor Vergara Koshikene — RM 568813
+**Alunos:** 
+1. Victor Vergara Koshikene      — RM 568813
+2. Leonardo Lima de Queiroz      — RM 573539
+3. Vinicius Prado Speria         — RM 572741
+4. Leonardo Ribeiro de Souza     — RM 571534
+5. Matheus Costa Manzoli Machado — RM 571814
 
 [![Abrir no Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/koshivv/fiap-farmtech_solutions-fase06/blob/main/VictorVergaraKoshikene_rm568813_pbl_fase6.ipynb)
 
