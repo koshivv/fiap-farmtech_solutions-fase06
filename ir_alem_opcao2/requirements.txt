@@ -1,0 +1,22 @@
+# Ir Além — Opção 2: dependências
+#
+# Google Colab (recomendado): nada a instalar à mão. As células de configuração instalam só o que falta
+# (ultralytics==8.4.175 e pycocotools); keras, torch, numpy, pandas e matplotlib já vêm no runtime.
+#
+# Execução local (versões da execução de referência: Windows, Python 3.11, CPU, backend torch):
+#   python -m venv .venv && .venv/Scripts/python -m pip install -r ir_alem_opcao2/requirements.txt
+keras==3.13.2
+torch==2.14.1
+torchvision==0.29.1
+ultralytics==8.4.175
+pycocotools==2.0.11
+numpy==2.4.6
+pandas==3.0.6
+matplotlib==3.11.2
+scikit-learn==1.9.1
+scipy==1.17.1
+pillow==12.3.0
+h5py==3.16.0
+# Para executar os notebooks localmente
+ipykernel==7.4.0
+nbconvert==7.17.2
