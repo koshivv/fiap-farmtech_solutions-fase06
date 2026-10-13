@@ -1,0 +1,5 @@
+modelo,pipeline,ms/img,desvio,dispositivo
+CNN do zero,original,27.4,3.1,classificador: CPU (torch); segmentador: CPU
+CNN do zero,segmentada,277.6,89.5,classificador: CPU (torch); segmentador: CPU
+Transfer Learning (EfficientNetB0),original,246.6,46.2,classificador: CPU (torch); segmentador: CPU
+Transfer Learning (EfficientNetB0),segmentada,500.9,81.6,classificador: CPU (torch); segmentador: CPU

@@ -1,0 +1,9 @@
+modelo,condicao_treino,acuracia,log_loss,p_correta
+CNN do zero,original,0.785 ± 0.053,0.608 ± 0.101,0.714 ± 0.044
+Transfer Learning (EfficientNetB0),original,0.988 ± 0.011,0.039 ± 0.005,0.966 ± 0.004
+CNN do zero,segmentada,0.854 ± 0.022,0.68 ± 0.084,0.818 ± 0.012
+Transfer Learning (EfficientNetB0),segmentada,1.0 ± 0.0,0.026 ± 0.004,0.977 ± 0.003
+CNN do zero,recorte,0.838 ± 0.037,0.684 ± 0.16,0.818 ± 0.028
+Transfer Learning (EfficientNetB0),recorte,0.973 ± 0.011,0.042 ± 0.005,0.969 ± 0.003
+CNN do zero,oráculo (GT),0.885 ± 0.014,0.384 ± 0.111,0.841 ± 0.016
+Transfer Learning (EfficientNetB0),oráculo (GT),1.0 ± 0.0,0.016 ± 0.003,0.985 ± 0.003

@@ -1,0 +1,15 @@
+{
+ "python": "3.11.9",
+ "colab": false,
+ "keras_backend": "torch",
+ "commit": "11a4eb8",
+ "keras": "3.13.2",
+ "torch": "2.14.1",
+ "jax": "0.10.2",
+ "ultralytics": "8.4.175",
+ "numpy": "2.4.6",
+ "pandas": "3.0.6",
+ "scikit-learn": "1.9.1",
+ "gpu_torch": false,
+ "dispositivo_keras": "CPU"
+}

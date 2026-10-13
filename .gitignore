@@ -1,0 +1,19 @@
+# Enunciado da FIAP: material de apoio local, fora do repositório
+docs/
+
+# Ir Além — dados baixados em tempo de execução (imagens COCO, anotações, máscaras, recortes)
+ir_alem_opcao2/_dados/
+
+# Pesos de modelos (gerados em ir_alem_opcao2/_dados/modelos ou no Drive de quem executa; ver ir_alem_opcao2/README.md)
+*.pt
+*.pth
+*.h5
+*.keras
+*.onnx
+
+# Python / Jupyter
+__pycache__/
+*.py[cod]
+.ipynb_checkpoints/
+.venv/
+venv/
