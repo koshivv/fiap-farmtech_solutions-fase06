@@ -1,0 +1,11 @@
+modelo,condicao,seed,melhor_epoca,melhor_epoca_fase1,tempo_treino_s,parametros_treinaveis,parametros_treinaveis_fase1
+cnn,O,42,30,,540.3,241794,
+tl,O,42,60,28,273.9,1124146,2562
+cnn,O,43,17,,1105.9,241794,
+tl,O,43,60,30,610.5,1124146,2562
+cnn,O,44,17,,881.8,241794,
+tl,O,44,59,20,575.2,1124146,2562
+cnn,O,45,17,,1022.6,241794,
+tl,O,45,52,30,603.8,1124146,2562
+cnn,O,46,34,,1164.6,241794,
+tl,O,46,60,30,596.7,1124146,2562

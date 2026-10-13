@@ -1,0 +1,3 @@
+,parâmetros treináveis,tempo de treino médio (s),latência (ms/img),dispositivo
+CNN do zero,241794,943.0,74.8 ± 7.8,CPU · backend torch
+EfficientNetB0,1124146,532.0,586.5 ± 115.9,CPU · backend torch
