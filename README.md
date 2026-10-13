@@ -12,7 +12,7 @@
 
 [![Abrir no Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/koshivv/fiap-farmtech_solutions-fase06/blob/main/VictorVergaraKoshikene_rm568813_pbl_fase6.ipynb)
 
-🎥 **Vídeo de demonstração (YouTube, não listado):** [assistir aqui](COLE_AQUI_O_LINK_DO_VIDEO)
+🎥 **Vídeo de demonstração (YouTube, não listado):** [assistir aqui](https://youtu.be/hdSxhYvAtgE)
 
 ---
 
