@@ -112,6 +112,7 @@ def calcular_cam(submodelo, imagem: np.ndarray) -> tuple[np.ndarray, int, np.nda
 
 
 def sobrepor_cam(ax, imagem: np.ndarray, cam: np.ndarray, titulo: str) -> None:
+    """Desenha a imagem com o CAM sobreposto (vermelho = maior peso na decisão)."""
     ax.imshow(imagem.astype(np.uint8))
     ax.imshow(cam, cmap="jet", alpha=0.45, vmin=0, vmax=1)
     ax.set_title(titulo, fontsize=9)

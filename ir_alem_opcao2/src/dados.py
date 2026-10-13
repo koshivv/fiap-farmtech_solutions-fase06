@@ -199,6 +199,7 @@ def _jpeg_integro(caminho: Path) -> bool:
 
 
 def abrir_imagem(caminho: Path) -> Image.Image:
+    """Abre a imagem e converte para RGB (há JPEGs em tons de cinza no COCO)."""
     return Image.open(caminho).convert("RGB")
 
 
@@ -219,6 +220,7 @@ PASTAS_CONDICAO = {"S": "segmentada", "C": "recorte", "G": "oraculo"}
 
 
 def caminho_condicao(arquivo: str, condicao: str) -> Path:
+    """Arquivo da imagem na condição O (JPEG original) ou S/C/G (PNG gerado pelo notebook 02)."""
     if condicao == "O":
         return config.IMAGENS_DIR / arquivo
     return config.CONDICOES_DIR / PASTAS_CONDICAO[condicao] / Path(arquivo).with_suffix(".png").name

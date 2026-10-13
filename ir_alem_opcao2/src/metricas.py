@@ -95,6 +95,7 @@ def ic_bootstrap(correto, n: int = 10_000, seed: int = config.SEED, alfa: float 
 
 
 def matriz_confusao(df: pd.DataFrame) -> np.ndarray:
+    """Matriz 2x2 (linhas = real, colunas = previsto; ordem gato, carro)."""
     return confusion_matrix(df.y, df.pred, labels=[0, 1])
 
 
@@ -134,5 +135,6 @@ def limiar_por_area(area_treino, y_treino) -> tuple[float, bool]:
 
 
 def prever_por_area(area, limiar: float, carro_abaixo: bool) -> np.ndarray:
+    """Aplica a regra aprendida por limiar_por_area (1 = carro, 0 = gato)."""
     area = np.asarray(area, float)
     return ((area < limiar) if carro_abaixo else (area >= limiar)).astype(int)

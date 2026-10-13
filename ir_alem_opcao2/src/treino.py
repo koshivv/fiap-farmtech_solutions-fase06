@@ -59,6 +59,7 @@ def capturar_pesos(modelo: keras.Model) -> dict[str, np.ndarray]:
 
 
 def restaurar_pesos(modelo: keras.Model, pesos: dict[str, np.ndarray]) -> None:
+    """Recoloca no modelo os pesos capturados por capturar_pesos (casando pelo caminho)."""
     for v in modelo.weights:
         v.assign(pesos[v.path])
 
@@ -246,10 +247,12 @@ def avaliar_salvo(tipo: str, nome: str, X: dict, tabelas: dict, condicao_treino:
 
 # ---------------- Pesos ----------------
 def caminho_pesos(nome: str):
+    """Arquivo .weights.h5 de uma execução (ex.: tl_S_s42)."""
     return config.MODELOS_DIR / f"{nome}.weights.h5"
 
 
 def salvar_pesos(modelo: keras.Model, nome: str) -> None:
+    """Grava os pesos em MODELOS_DIR (no Colab, no Drive)."""
     config.MODELOS_DIR.mkdir(parents=True, exist_ok=True)
     modelo.save_weights(caminho_pesos(nome))
 

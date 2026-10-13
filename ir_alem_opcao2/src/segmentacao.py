@@ -23,6 +23,8 @@ NOMES_ALVO = {config.YOLO80_ID["gato"]: "gato", config.YOLO80_ID["carro"]: "carr
 
 @dataclass
 class ResultadoSegmentacao:
+    """Saída da política de falha: máscara (ou None), status e diagnóstico."""
+
     mascara: np.ndarray | None              # bool (H, W); None quando a segmentação falhou
     status: str                             # "ok", "ok_conf_reduzida" ou "falha"
     area: float                             # fração da imagem coberta pela máscara final
@@ -105,11 +107,13 @@ def iou(a: np.ndarray, b: np.ndarray) -> float:
 
 
 def salvar_mascara(mascara: np.ndarray, caminho: Path) -> None:
+    """Grava a máscara como PNG em tons de cinza (0 = fundo, 255 = objeto)."""
     Path(caminho).parent.mkdir(parents=True, exist_ok=True)
     Image.fromarray(mascara.astype(np.uint8) * 255).save(caminho)
 
 
 def ler_mascara(caminho: Path) -> np.ndarray:
+    """Lê o PNG salvo por salvar_mascara (pixel > 127 = objeto)."""
     return np.asarray(Image.open(caminho)) > 127
 
 
@@ -131,6 +135,7 @@ class SegmentadorEntrega1:
         self.sam = SAM(str(Path(pasta_pesos) / "sam2.1_b.pt"))
 
     def mascara(self, img: Image.Image, conf: float) -> tuple[np.ndarray, list[str], int]:
+        """Caixas da YOLOv5 da Entrega 1 como prompts do SAM 2.1; devolve a união das máscaras."""
         self.detector.conf = conf
         det = self.detector(img, size=640).xyxy[0].cpu().numpy()       # x1, y1, x2, y2, conf, classe
         vazia = np.zeros((img.height, img.width), dtype=bool)

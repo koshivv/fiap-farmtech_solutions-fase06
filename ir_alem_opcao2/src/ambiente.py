@@ -44,6 +44,7 @@ def tensorflow_tem_gpu() -> bool:
 
 
 def torch_tem_gpu() -> bool:
+    """True se o PyTorch estiver instalado e enxergar uma GPU CUDA."""
     if not _tem_modulo("torch"):
         return False
     import torch
