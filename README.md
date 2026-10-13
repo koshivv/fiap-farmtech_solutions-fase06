@@ -30,7 +30,7 @@ O trabalho está dividido em duas partes, no mesmo notebook:
 - **Entrega 1:** treino de um **YOLOv5 customizado** com o nosso dataset, comparando três cenários de treino (**30, 60 e 100 épocas**) em acurácia, erro e desempenho.
 - **Entrega 2:** comparação da YOLO customizada com duas abordagens concorrentes, a **YOLO tradicional** (pré-treinada no COCO, sem customização) e uma **CNN treinada do zero**, em facilidade de uso, precisão, tempo de treinamento e tempo de inferência.
 
-> 📓 **Toda a solução está documentada no notebook** [`VictorVergaraKoshikene_rm568813_pbl_fase6.ipynb`](VictorVergaraKoshikene_rm568813_pbl_fase6.ipynb), com código comentado, saídas e análises. Este README é apenas um guia de entrada.
+> 📓 **A solução das Entregas 1 e 2 está documentada no notebook** [`VictorVergaraKoshikene_rm568813_pbl_fase6.ipynb`](VictorVergaraKoshikene_rm568813_pbl_fase6.ipynb), com código comentado, saídas e análises. Este README é apenas um guia de entrada.
 
 ## Como o notebook está organizado
 
@@ -80,12 +80,17 @@ O trabalho está dividido em duas partes, no mesmo notebook:
 
 As análises completas, incluindo limitações, estão nas Seções 9 e 15 do notebook.
 
+## Ir Além — Opção 2: Transfer Learning, Fine Tuning e Segmentação
+
+Transfer Learning com fine tuning (EfficientNetB0) contra a CNN do zero e pré-segmentação do objeto antes da classificação: **[`ir_alem_opcao2/`](ir_alem_opcao2/README.md)** (três notebooks, código em `src/`, resultados e figuras).
+
 ## Estrutura do repositório
 
 ```
 ├── VictorVergaraKoshikene_rm568813_pbl_fase6.ipynb   # notebook com a solução completa (Entregas 1 e 2)
 ├── README.md
 ├── assets/                                           # imagens usadas neste README
+├── ir_alem_opcao2/                                   # Ir Além — Opção 2 (ver o README próprio)
 └── dataset/
     ├── manifesto_dataset.csv                         # origem, grupo e divisão de cada imagem
     └── labels/
