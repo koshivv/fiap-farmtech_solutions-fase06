@@ -1,0 +1,9 @@
+conjunto,A,B,acurácia A,IC95% A,acurácia B,IC95% B,só A acerta,só B acerta,p-valor,hipótese,p (Holm)
+teste_ampliado,cnn·S,cnn·O,0.885,"(0.788, 0.962)",0.808,"(0.692, 0.904)",8,4,0.3877,H2,0.7754
+teste_ampliado,tl·S,tl·O,1.0,"(1.0, 1.0)",1.0,"(1.0, 1.0)",0,0,1.0,H2,1.0
+teste_ampliado,tl·O,cnn·O,1.0,"(1.0, 1.0)",0.808,"(0.692, 0.904)",10,0,0.002,H1,0.004
+teste_ampliado,tl·S,cnn·S,1.0,"(1.0, 1.0)",0.885,"(0.788, 0.962)",6,0,0.0312,H1,0.0312
+teste_original,cnn·S,cnn·O,1.0,"(1.0, 1.0)",0.875,"(0.625, 1.0)",1,0,1.0,H2,descritivo
+teste_original,tl·S,tl·O,1.0,"(1.0, 1.0)",1.0,"(1.0, 1.0)",0,0,1.0,H2,descritivo
+teste_original,tl·O,cnn·O,1.0,"(1.0, 1.0)",0.875,"(0.625, 1.0)",1,0,1.0,H1,descritivo
+teste_original,tl·S,cnn·S,1.0,"(1.0, 1.0)",1.0,"(1.0, 1.0)",0,0,1.0,H1,descritivo

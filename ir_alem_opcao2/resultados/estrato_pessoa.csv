@@ -1,0 +1,7 @@
+grupo,,carro,carro,gato,gato
+tem_pessoa,,False,True,False,True
+modelo,condicao_treino,,,,
+cnn,O,0.9,0.811,0.708,1.0
+cnn,S,0.95,0.778,0.867,1.0
+tl,O,1.0,1.0,0.975,1.0
+tl,S,1.0,1.0,1.0,1.0

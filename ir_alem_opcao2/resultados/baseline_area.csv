@@ -1,0 +1,5 @@
+conjunto,imagens,acurácia só pela área,falhas de segmentação
+treino,64,0.688,5
+validacao,8,0.875,0
+teste_original,8,0.625,0
+teste_ampliado,52,0.673,3
